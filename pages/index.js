@@ -36,7 +36,9 @@ export const getServerSideProps = async (context) => {
     admin = true;
   }
 
-  const res = await axios.get("https://api.vercel.com/api/products");
+  const res = await axios.get(
+    "https://api.vercel.com/v9/projects/api/products"
+  );
 
   return {
     props: {
