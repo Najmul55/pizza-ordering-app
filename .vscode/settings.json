@@ -1,0 +1,49 @@
+// {
+//   "workbench.statusBar.visible": false,
+//   "editor.minimap.enabled": false
+// }
+
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true,
+    "source.organizeImports": true
+  },
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.minimap.enabled": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "Learn with Sumit Theme",
+  "workbench.editor.enablePreview": false,
+  "workbench.iconTheme": "vscode-icons",
+  "tabnine.experimentalAutoImports": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.fontFamily": "jetbrains mono", // fira code and jetbrains mono
+  "editor.fontLigatures": true,
+  "editor.mouseWheelZoom": true,
+
+  "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript"], // auto rename tage
+
+  "css.validate": false, // tailwind intellisense
+  "tailwindCSS.emmetCompletions": true,
+  "editor.quickSuggestions": {
+    // tailwind e quich suggestion dibe
+    "strings": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "blockman.n01LineHeight": 0,
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f"
+  },
+  "editor.wordWrap": "off",
+  "diffEditor.wordWrap": "off",
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairs": false,
+  "editor.inlayHints.enabled": false,
+  "window.zoomLevel": 1
+}
