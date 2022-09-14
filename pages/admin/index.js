@@ -1,8 +1,8 @@
 // import { useState } from "react";
-import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/Admin.module.css";
+import baseURL from "../../utilitis/baseUrl";
 
 // admin pannel
 const Index = ({ products, orders = "" }) => {
@@ -13,9 +13,7 @@ const Index = ({ products, orders = "" }) => {
   // delete product handler
   const handleDelete = async (id) => {
     try {
-      const res = await axios.delete(
-        "http://localhost:3000/api/products/" + id
-      );
+      const res = await baseURL.delete("/products/" + id);
       setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
     } catch (err) {
       console.log(err.message);
@@ -134,8 +132,8 @@ export const getServerSideProps = async (context) => {
     };
   }
 
-  const productRes = await axios.get("http://localhost:3000/api/products");
-  const orderRes = await axios.get("http://localhost:3000/api/orders");
+  const productRes = await baseURL.get("/products");
+  const orderRes = await baseURL.get("/orders");
 
   return {
     props: {

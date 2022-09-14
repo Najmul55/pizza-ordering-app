@@ -1,4 +1,3 @@
-import axios from "axios";
 import Head from "next/head";
 import { useState } from "react";
 import Add from "../components/Add";
@@ -7,6 +6,7 @@ import AddButton from "../components/AddButton";
 import Featured from "../components/Featured";
 import PizzaList from "../components/PizzaList";
 import styles from "../styles/Home.module.css";
+import baseURL from "../utilitis/baseUrl";
 
 export default function Home({ pizzaList, admin }) {
   const [close, setClose] = useState(true);
@@ -36,7 +36,7 @@ export const getServerSideProps = async (context) => {
     admin = true;
   }
 
-  const res = await axios.get("/api/products");
+  const res = await baseURL.get("/products");
 
   return {
     props: {

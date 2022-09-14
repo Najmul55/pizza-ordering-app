@@ -1,9 +1,9 @@
-import axios from "axios";
 import Image from "next/image";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/cartSlice";
 import styles from "../../styles/Product.module.css";
+import baseURL from "../../utilitis/baseUrl";
 
 const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0]);
@@ -115,9 +115,7 @@ const Product = ({ pizza }) => {
 
 export const getServerSideProps = async ({ params }) => {
   // console.log(params.id);
-  const res = await axios.get(
-    `http://localhost:3000/api/products/${params.id}`
-  );
+  const res = await baseURL.get(`products/${params.id}`);
   // console.log(res.data);
 
   return {
