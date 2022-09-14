@@ -1,7 +1,10 @@
 import axios from "axios";
 
 const baseURL = axios.create({
-  baseURL: "https://pizza-ordering-app-lilac.vercel.app/api/",
+  baseURL:
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000/api/"
+      : "https://" + process.env.NEXT_PUBLIC_VERCEL_URL + "/api/",
 
   /**
    * vercel er domain diye envernment variable se automatic genarate kore ney.
