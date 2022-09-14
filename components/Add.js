@@ -53,7 +53,7 @@ const Add = ({ setClose }) => {
         img: url,
       };
       // post product
-      await axios.post("http://localhost:3000/api/products", newProduct);
+      await axios.post("/api/products", newProduct);
       Router.push("/");
       setClose(true);
     } catch (err) {

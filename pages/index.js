@@ -36,9 +36,7 @@ export const getServerSideProps = async (context) => {
     admin = true;
   }
 
-  const res = await axios.get(
-    "https://pizza-ordering-app-lilac.vercel.app/projects/api/products"
-  );
+  const res = await axios.get("/api/products");
 
   return {
     props: {
