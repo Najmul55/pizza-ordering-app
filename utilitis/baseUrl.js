@@ -4,7 +4,7 @@ const baseURL = axios.create({
   baseURL:
     (process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://" + process.env.VERCEL_URL) + "/api/",
+      : "https://" + process.env.NEXT_PUBLIC_VERCEL_URL) + "/api/",
 
   /**
    * vercel er domain diye envernment variable se automatic genarate kore ney.

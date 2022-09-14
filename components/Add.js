@@ -2,6 +2,7 @@ import axios from "axios";
 import Router from "next/router";
 import { useState } from "react";
 import styles from "../styles/Add.module.css";
+import baseURL from "../utilitis/baseUrl";
 
 const Add = ({ setClose }) => {
   const [file, setFile] = useState(null);
@@ -53,7 +54,7 @@ const Add = ({ setClose }) => {
         img: url,
       };
       // post product
-      await axios.post("/products", newProduct);
+      await baseURL.post("/products", newProduct);
       Router.push("/");
       setClose(true);
     } catch (err) {
