@@ -53,7 +53,7 @@ const Add = ({ setClose }) => {
         img: url,
       };
       // post product
-      await axios.post("/api/products", newProduct);
+      await axios.post("/products", newProduct);
       Router.push("/");
       setClose(true);
     } catch (err) {
